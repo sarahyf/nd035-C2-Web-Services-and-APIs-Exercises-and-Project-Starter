@@ -1,0 +1,1 @@
+INSERT INTO Price VALUES (1, 'SR', 1000, 3);

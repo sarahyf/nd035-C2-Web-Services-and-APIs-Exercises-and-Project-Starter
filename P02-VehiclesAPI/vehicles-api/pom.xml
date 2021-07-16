@@ -16,8 +16,7 @@
     <description>A Restful API for vehicles</description>
 
     <properties>
-        <java.version>16</java.version>
-        <!-- <spring-cloud.version>2020.0.2</spring-cloud.version> -->
+        <java.version>11</java.version>
     </properties>
 
     <dependencies>
@@ -25,10 +24,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-        <!-- <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
-        </dependency> -->
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -37,37 +36,35 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-hateoas</artifactId>
         </dependency>
-        <!-- <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
-        </dependency> -->
+        </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-        <!-- <dependency>
+        <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
-            <version>3.4.3</version>
-        </dependency> -->
+            <version>3.3.2</version>
+        </dependency>
 
-        <!-- <dependency>
+        <dependency>
             <groupId>com.sun.xml.ws</groupId>
             <artifactId>jaxws-rt</artifactId>
-            <version>3.0.1</version>
+            <version>2.3.2</version>
             <type>pom</type>
-        </dependency> -->
+        </dependency>
 
-        <!-- <dependency>
-            <groupId>javax.activation</groupId> -->
-            <!-- <artifactId>activation</artifactId>
-            <version>1.1.1</version> -->
-            <!-- <artifactId>javax.activation-api</artifactId>
-            <version>1.2.0</version>
-        </dependency> -->
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1.1</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -77,26 +74,26 @@
         <dependency>
             <groupId>org.modelmapper</groupId>
             <artifactId>modelmapper</artifactId>
-            <version>2.4.3</version>
+            <version>2.3.2</version>
         </dependency>
-
+        
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.9.2</version>
-        </dependency> -->
+            <version>2.10.0</version>
+        </dependency>
 
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
             <version>2.9.2</version>
             <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
@@ -107,10 +104,10 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!-- <plugin>
+            <plugin>
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-codegen-plugin</artifactId>
-                <version>${spring-cloud.version}</version>
+                <version>3.3.2</version>
                 <executions>
                     <execution>
                         <id>generate-sources</id>
@@ -118,18 +115,18 @@
                         <configuration>
                             <sourceRoot>${project.build.directory}/generated-sources/cxf
                             </sourceRoot>
-                            <wsdlOptions>
+                            <!-- <wsdlOptions>
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/price.wsdl</wsdl>
                                 </wsdlOption>
-                            </wsdlOptions>
+                            </wsdlOptions> -->
                         </configuration>
                         <goals>
                             <goal>wsdl2java</goal>
                         </goals>
                     </execution>
                 </executions>
-            </plugin> -->
+            </plugin>
         </plugins>
     </build>
 
